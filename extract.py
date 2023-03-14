@@ -21,6 +21,9 @@ def parse_args():
 
 
 def main(args):
+    if args.path_video is None or args.output_folder is None:
+        print("Error: Path to video or output folder not specified!")
+        return
     videoPath = args.path_video
     outputPath = args.output_folder
     videoName = args.path_video.split("/")[-1]
